@@ -33,25 +33,25 @@ The threads use the counter to add and subtract values.
 When a lot of people use Banking application means there are a lot of threads and threads run at the same time cause error in the application.
 
 ## 3. Counter with ReentrantLock
-
-3.1 Yes, total is always 0. Average runtime 0.2003966 second.
+3.1 Yes, total is always 0. Average runtime 0.2003966 second.	
 3.2 Because ReentrantLock locked Counter to have only 1 thread can access.
-3.3 
+3.3 Thread 1 access Counter then lock Counter when thread 1 finish calculation then unlock the Counter.
 3.4 Because lock.unlock() use to unlock Counter.
 
 ## 4. Counter with synchronized method
-
-4.1 
-4.2
-4.3
+4.1 Total is always 0. Average runtime 0.8563106 second.
+4.2 Because using synchronized method.
+4.3 Synchronized means only one thread can access the method at that time. We use synchronized to avoid error when 2 thread run at the same time.
 
 ## 5. Counter with AtomicLong
 
-answer question 5
-
+5.1 Because AtomicLong always update the number all the time.
+5.2 We use AtomicLong when the code is not complex.
+	
 ## 6. Analysis of Results
 
-answer question 6
+6.1 AtomicCounter is the fastest, SynchronousCounter is the slowest.
+6.2 Use AtomicCounter to make program faster.
 
 ## 7. Using Many Threads (optional)
 
